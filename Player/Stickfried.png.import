@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stickfried.png-92c8e33dda7a8a914a2806683277919c.stex"
+path="res://.import/Stickfried.png-23c1b274761fd2f3c0f0a301147f4a07.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Stickfried.png"
-dest_files=[ "res://.import/Stickfried.png-92c8e33dda7a8a914a2806683277919c.stex" ]
+source_file="res://Player/Stickfried.png"
+dest_files=[ "res://.import/Stickfried.png-23c1b274761fd2f3c0f0a301147f4a07.stex" ]
 
 [params]
 
