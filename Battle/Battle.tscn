@@ -18,7 +18,7 @@ texture = ExtResource( 7 )
 centered = false
 
 [node name="Slime" parent="." instance=ExtResource( 1 )]
-position = Vector2( 805, 394 )
+position = Vector2( 821, 437 )
 scale = Vector2( 1, 1 )
 maxHp = 4
 curHp = 4
