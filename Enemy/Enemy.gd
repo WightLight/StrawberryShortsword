@@ -14,4 +14,4 @@ func _process(delta):
 	pass
 
 func damage(amount: int):
-	curHp -= 1
+	curHp -= amount
