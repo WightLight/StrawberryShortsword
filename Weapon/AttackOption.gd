@@ -1,5 +1,7 @@
 extends TextureButton
 
+signal attack_finished
+
 var weapon: Weapon
 var target: Enemy
 
@@ -14,3 +16,4 @@ func _ready():
 
 func _on_AttackOption_pressed():
 	weapon.attack(target)
+	emit_signal("attack_finished")

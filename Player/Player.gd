@@ -1,23 +1,15 @@
 extends Node2D
 
-class_name Enemy
+class_name Player
 
 signal health_changed
 
-export(int) var maxHp
-export(int) var curHp
-
+export var maxHp = 6
+export var curHp = 6
 
 func _ready():
-	pass
-
-
-func _process(delta):
-	pass
+	$HpIndicator.showHp(curHp, maxHp)
 
 func damage(amount: int):
 	curHp -= amount
 	emit_signal("health_changed", curHp, maxHp)
-
-func attack(battle: Battle):
-	pass

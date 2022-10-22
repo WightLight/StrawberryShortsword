@@ -33,3 +33,5 @@ position = Vector2( 255, 348 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[connection signal="attack_finished" from="AttackOption" to="." method="_on_AttackOption_attack_finished"]

@@ -16,3 +16,5 @@ texture = ExtResource( 1 )
 
 [node name="HpIndicator" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -300 )
+
+[connection signal="health_changed" from="." to="HpIndicator" method="_on_health_changed"]
