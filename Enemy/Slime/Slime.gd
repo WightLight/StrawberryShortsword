@@ -22,6 +22,6 @@ func update_hp_status():
 	else:
 		$Sprite.texture = healthy_texture
 
-func attack(player: Player):
+func _do_attack(player: Player):
 	player.damage(1)
 	$AnimationPlayer.play("Slime Attack")
