@@ -13,3 +13,4 @@ func damage(amount: int):
 
 func attack(player: Player):
 	player.damage(1)
+	$AnimationPlayer.play("Slime Attack")
