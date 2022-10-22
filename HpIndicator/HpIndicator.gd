@@ -15,10 +15,11 @@ func showHp(curHp: int, maxHp: int):
 		$Hearts.add_child(sprite)
 		
 	for n in range(maxHp - curHp):
-		var sprite = Sprite.new()
-		sprite.position.x = (n + curHp) * 100
-		sprite.texture = emptyTexture
-		$Hearts.add_child(sprite)
+		if n <= maxHp:
+			var sprite = Sprite.new()
+			sprite.position.x = (n + curHp) * 100
+			sprite.texture = emptyTexture
+			$Hearts.add_child(sprite)
 
 func _on_health_changed(curHp, maxHp):
 	showHp(curHp, maxHp)
