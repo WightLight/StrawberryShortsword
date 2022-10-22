@@ -1,8 +1,12 @@
 extends Enemy
 
 func _ready():
-	pass
+	$HpIndicator.showHp(curHp, maxHp)
 
 
 func _process(delta):
-	$HpText.text = str(curHp)
+	pass
+
+func damage(amount: int):
+	.damage(amount)
+	$HpIndicator.showHp(curHp, maxHp)
