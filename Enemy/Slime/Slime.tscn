@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Enemy/Slime/Cinnamon Drop.png" type="Texture" id=1]
+[ext_resource path="res://Enemy/Slime/Cinnamon Drop Healthy.png" type="Texture" id=1]
 [ext_resource path="res://Enemy/Slime/Slime.gd" type="Script" id=2]
 [ext_resource path="res://HpIndicator/HpIndicator.tscn" type="PackedScene" id=3]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Cinnamon Drop.png-615fa32b199f63ce0609e4683af6f88a.stex"
+path="res://.import/Cinnamon Drop Bloodied.png-e15cf060b95115373fdd340ba5445724.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Enemy/Slime/Cinnamon Drop.png"
-dest_files=[ "res://.import/Cinnamon Drop.png-615fa32b199f63ce0609e4683af6f88a.stex" ]
+source_file="res://Enemy/Slime/Cinnamon Drop Bloodied.png"
+dest_files=[ "res://.import/Cinnamon Drop Bloodied.png-e15cf060b95115373fdd340ba5445724.stex" ]
 
 [params]
 
