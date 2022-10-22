@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://HpIndicator/HpIndicator.gd" type="Script" id=1]
 [ext_resource path="res://HpIndicator/HeartCookieOrangeFull.png" type="Texture" id=2]
+[ext_resource path="res://HpIndicator/HeartCookieOrangeEmpty.png" type="Texture" id=3]
 
 [node name="HpIndicator" type="Node2D"]
 scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 1 )
-texture = ExtResource( 2 )
+fullTexture = ExtResource( 2 )
+emptyTexture = ExtResource( 3 )
 
 [node name="Hearts" type="Node2D" parent="."]
