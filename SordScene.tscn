@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[sub_resource type="StreamTexture" id=1]
-flags = 4
-load_path = "res://.import/sord.png-ba7b5b6a451abaf00d51660d4c7785c5.stex"
-
-[node name="Sord" type="Sprite"]
-position = Vector2( 400, 301 )
-texture = SubResource( 1 )
