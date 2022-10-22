@@ -6,6 +6,8 @@
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 2 )
+maxHp = 12
+curHp = 12
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.5, 1.5 )
