@@ -13,7 +13,8 @@ func show_attack_options():
 			var attack_option: AttackOption = attack_option_scene.instance()
 			enemy.add_child(attack_option)
 			attack_option.assign(weapon, enemy)
-			attack_option.rect_position.y = -200
+			attack_option.rect_position.x = 50
+			attack_option.rect_position.y = -125
 			attack_option.connect("attack_finished", self, "_on_attack_finished")
 
 func hide_attack_options():
