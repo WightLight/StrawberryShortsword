@@ -11,5 +11,5 @@ func damage(amount: int):
 	.damage(amount)
 	$HpIndicator.showHp(curHp, maxHp)
 
-func attack(battle: Battle):
-	battle.get_node("Player").damage(1)
+func attack(player: Player):
+	player.damage(1)

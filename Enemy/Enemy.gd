@@ -19,5 +19,5 @@ func damage(amount: int):
 	curHp -= amount
 	emit_signal("health_changed", curHp, maxHp)
 
-func attack(battle: Battle):
+func attack(player: Player):
 	pass
