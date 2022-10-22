@@ -5,7 +5,7 @@ class_name Battle
 
 
 func _ready():
-	$Enemies/Slime/AttackOption.assign($BlueberryPike, $Enemies/Slime)
+	$Enemies/Slime/AttackOption.assign($Player/Weapons/BlueberryPike, $Enemies/Slime)
 
 
 func _on_AttackOption_attack_finished():
