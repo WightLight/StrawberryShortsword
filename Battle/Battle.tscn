@@ -12,21 +12,22 @@ script = ExtResource( 5 )
 
 [node name="Slime" parent="." instance=ExtResource( 1 )]
 position = Vector2( 805, 394 )
+scale = Vector2( 1, 1 )
 maxHp = 4
 curHp = 4
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 222, 358 )
-
-[node name="AttackOption" parent="." instance=ExtResource( 4 )]
-margin_left = 850.0
-margin_top = 236.0
-margin_right = 950.0
-margin_bottom = 336.0
+[node name="AttackOption" parent="Slime" instance=ExtResource( 4 )]
+margin_left = 37.0
+margin_top = -151.0
+margin_right = 137.0
+margin_bottom = -51.0
 texture_normal = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 222, 358 )
 
 [node name="BlueberryPike" parent="." instance=ExtResource( 6 )]
 position = Vector2( 255, 348 )
@@ -34,4 +35,4 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[connection signal="attack_finished" from="AttackOption" to="." method="_on_AttackOption_attack_finished"]
+[connection signal="attack_finished" from="Slime/AttackOption" to="." method="_on_AttackOption_attack_finished"]
