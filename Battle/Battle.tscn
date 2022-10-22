@@ -1,9 +1,7 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Enemy/Slime/Slime.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Weapon/BlueberryPike/BlueberryPikeIcon.png" type="Texture" id=3]
-[ext_resource path="res://Weapon/AttackOption.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Battle/Battle.gd" type="Script" id=5]
 [ext_resource path="res://Weapon/BlueberryPike/BlueberryPike.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Background/CaveBackground.png" type="Texture" id=7]
@@ -25,16 +23,6 @@ scale = Vector2( 1, 1 )
 maxHp = 4
 curHp = 4
 
-[node name="AttackOption" parent="Enemies/Slime" instance=ExtResource( 4 )]
-margin_left = 37.0
-margin_top = -151.0
-margin_right = 137.0
-margin_bottom = -51.0
-texture_normal = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 222, 358 )
 
@@ -50,5 +38,3 @@ __meta__ = {
 scale = Vector2( 2.16, 2.03 )
 texture = ExtResource( 8 )
 centered = false
-
-[connection signal="attack_finished" from="Enemies/Slime/AttackOption" to="." method="_on_AttackOption_attack_finished"]

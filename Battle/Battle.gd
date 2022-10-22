@@ -2,22 +2,24 @@ extends Node
 
 class_name Battle
 
-
+var attack_option_scene = load("res://Weapon/AttackOption.tscn")
 
 func _ready():
-	$Enemies/Slime/AttackOption.assign($Player/Weapons/BlueberryPike, $Enemies/Slime)
-
-
-func _on_AttackOption_attack_finished():
-	$Enemies/Slime.attack(self)
+	show_attack_options()
 
 func show_attack_options():
-	# for each enemy on the scene
-	# for each weapon that can actually hit
-	# Show the attack options
-	# Assign the option accordingly
-	pass
+	for enemy in $Enemies.get_children():
+		for weapon in $Player/Weapons.get_children():
+			var attack_option: AttackOption = attack_option_scene.instance()
+			enemy.add_child(attack_option)
+			attack_option.assign(weapon, enemy)
+			attack_option.rect_position.y = -200
+			attack_option.connect("attack_finished", self, "_on_attack_finished")
 
 func hide_attack_options():
 	# I guess just destroy them
 	pass
+
+func _on_attack_finished():
+	for enemy in $Enemies.get_children():
+		enemy.attack($Player)
