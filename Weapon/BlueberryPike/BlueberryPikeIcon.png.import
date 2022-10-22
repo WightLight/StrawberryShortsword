@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BlueberryPike.png-28ec125285e2e63d7b3ce46bac7db880.stex"
+path="res://.import/BlueberryPikeIcon.png-d934fb8872895c98c7d541016b415c8f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BlueberryPike.png"
-dest_files=[ "res://.import/BlueberryPike.png-28ec125285e2e63d7b3ce46bac7db880.stex" ]
+source_file="res://Weapon/BlueberryPike/BlueberryPikeIcon.png"
+dest_files=[ "res://.import/BlueberryPikeIcon.png-d934fb8872895c98c7d541016b415c8f.stex" ]
 
 [params]
 

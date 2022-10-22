@@ -8,6 +8,22 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Enemy/Enemy.gd"
+}, {
+"base": "Node2D",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://Weapon/Weapon.gd"
+} ]
+_global_script_class_icons={
+"Enemy": "",
+"Weapon": ""
+}
+
 [application]
 
 config/name="StrawberryShortsword"
