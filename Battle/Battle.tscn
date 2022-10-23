@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Enemy/Slime/Slime.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Battle/Battle.gd" type="Script" id=5]
-[ext_resource path="res://Weapon/BlueberryPike/BlueberryPike.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Background/CaveBackground.png" type="Texture" id=7]
 [ext_resource path="res://Background/CaveForeground.png" type="Texture" id=8]
 
@@ -27,14 +26,6 @@ scale = Vector2( 1, 1 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 222, 358 )
-
-[node name="Weapons" type="Node2D" parent="Player"]
-
-[node name="BlueberryPike" parent="Player/Weapons" instance=ExtResource( 6 )]
-position = Vector2( 33, -10 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CaveForeground" type="Sprite" parent="."]
 scale = Vector2( 2.16, 2.03 )

@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Stickfried.png" type="Texture" id=1]
 [ext_resource path="res://Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://HpIndicator/HpIndicator.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Weapon/BlueberryPike/BlueberryPike.tscn" type="PackedScene" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Player Attack"
 step = 0.05
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("Animatable:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -20,7 +21,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 22 ), Vector2( 0, 22 ), Vector2( 83, 34 ), Vector2( 83, 34 ), Vector2( 100, 0 ), Vector2( 100, 0 ), Vector2( 100, 13 ), Vector2( 50, -78 ), Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
+tracks/1/path = NodePath("Animatable:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -32,7 +33,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1.5, 1.5 ), Vector2( 1.84211, 1.12069 ), Vector2( 1.84211, 1.12069 ), Vector2( 2.21053, 0.913793 ), Vector2( 2.21053, 0.913793 ), Vector2( 1.5, 1.5 ), Vector2( 1.5, 1.5 ), Vector2( 1.81579, 1.27586 ), Vector2( 1, 2 ), Vector2( 1.5, 1.5 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:rotation_degrees")
+tracks/2/path = NodePath("Animatable:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -46,52 +47,24 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id=2]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 1.5, 1.5 ) ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Sprite:rotation_degrees")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ -15.0 ]
-}
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 2 )
 maxHp = 12
 curHp = 12
 
-[node name="Sprite" type="Sprite" parent="."]
-rotation = -0.261799
+[node name="Animatable" type="Node2D" parent="."]
 scale = Vector2( 1.5, 1.5 )
+
+[node name="Sprite" type="Sprite" parent="Animatable"]
+rotation = -0.261799
 texture = ExtResource( 1 )
+
+[node name="Weapons" type="Node2D" parent="Animatable"]
+
+[node name="BlueberryPike" parent="Animatable/Weapons" instance=ExtResource( 4 )]
+position = Vector2( 27.332, -7.333 )
+scale = Vector2( 0.66, 0.66 )
 
 [node name="HpIndicator" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -150 )

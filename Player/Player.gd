@@ -13,3 +13,9 @@ func _ready():
 func damage(amount: int):
 	curHp -= amount
 	emit_signal("health_changed", curHp, maxHp)
+
+func animate_attack():
+	$AnimationPlayer.play("Player Attack")
+
+func get_weapons():
+	return $Animatable/Weapons.get_children()
