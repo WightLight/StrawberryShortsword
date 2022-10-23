@@ -22,8 +22,18 @@ func damage(amount: int):
 	if curHp <= 0:
 		die()
 
-func attack(player: Player):
+func is_alive():
+	return curHp > 0
+
+func can_attack():
+	return is_alive()
+
+func _do_attack(player: Player):
 	pass
+
+func attack(player: Player):
+	if can_attack():
+		_do_attack(player)
 
 func die():
 	emit_signal("death")
