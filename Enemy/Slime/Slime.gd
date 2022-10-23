@@ -1,5 +1,7 @@
 extends Enemy
 
+signal tackle_collide
+
 export(Texture) var healthy_texture
 export(Texture) var bloodied_texture
 
@@ -22,6 +24,10 @@ func update_hp_status():
 	else:
 		$Sprite.texture = healthy_texture
 
+var _currently_attacking
 func _do_attack(player: Player):
-	player.damage(1)
+	_currently_attacking = player
 	$AnimationPlayer.play("Slime Attack")
+
+func _on_Slime_tackle_collide():
+	_currently_attacking.damage(1)
